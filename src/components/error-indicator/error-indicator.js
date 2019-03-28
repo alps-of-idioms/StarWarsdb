@@ -1,14 +1,13 @@
 import React from "react";
 import "./error-indicator.css";
-import icon from "./mark_engineer.jpg";
+import icon from "./death-star.png";
 
 const ErrorIndicator = () => {
   return (
     <div className="error-indicator">
       <img src={icon} alt="erroricon" />
-      <span className="boom">БУМ-ЕБАНА!</span>
-      <span>Преступник найден</span>
-      <span>Предьявите вашу сишку!</span>
+      <span className="boom">Произошла ошибка</span>
+      <span>Перезагрузите страницу</span>
     </div>
   );
 };

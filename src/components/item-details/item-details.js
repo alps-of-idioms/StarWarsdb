@@ -1,9 +1,8 @@
 import React, { PureComponent } from "react";
 import Spinner from "../spinner";
-import ErrorButton from "../error-button";
-
+//import ErrorButton from "../error-button";
 import "./item-details.css";
-import ErrorIndicator from "../error-indicator";
+//import ErrorIndicator from "../error-indicator";
 
 const Record = ({ item, field, label }, indx) => {
   return (
@@ -84,7 +83,7 @@ export default class ItemDetails extends PureComponent {
         <span>Select an item from a list</span>
       ) : null;
     const spinner = loading ? <Spinner /> : null;
-    const errorView = error ? <ErrorIndicator /> : null;
+    //const errorView = error ? <ErrorIndicator /> : null;
     const view =
       item && !loading ? (
         <ViewDetailss
@@ -98,7 +97,7 @@ export default class ItemDetails extends PureComponent {
         {prevMessage}
         {spinner}
         {view}
-        {errorView}
+        {/*errorView*/}
       </div>
     );
   }
@@ -119,7 +118,7 @@ const ViewDetailss = ({ item, image, children }) => {
             return React.cloneElement(child, { item }, indx);
           })}
         </ul>
-        <ErrorButton />
+        {/* {<ErrorButton />} */}
       </div>
     </React.Fragment>
   );
