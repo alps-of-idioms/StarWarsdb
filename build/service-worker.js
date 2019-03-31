@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/swdatabase/precache-manifest.0c837be33bcb86b9350b3698d70aaaa1.js"
+  "/StarWarsdb/precache-manifest.fdbac2866e11650c8c9ada787cd094d6.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/swdatabase/index.html", {
+workbox.routing.registerNavigationRoute("/StarWarsdb/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
