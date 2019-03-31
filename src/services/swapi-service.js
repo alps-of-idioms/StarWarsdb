@@ -14,7 +14,7 @@ export default class SwapiService {
 
   getAllPeople = async () => {
     const res = await this.getResource(`/people/`);
-    return res.results.map(this._transformPerson).slice(0, 5);
+    return res.results.map(this._transformPerson);
   };
 
   getPerson = async id => {
@@ -29,7 +29,7 @@ export default class SwapiService {
 
   getAllPlanets = async () => {
     const res = await this.getResource(`/planets/`);
-    return res.results.map(this._transformPlanet).slice(0, 5);
+    return res.results.map(this._transformPlanet);
   };
 
   getPlanet = async id => {
@@ -44,7 +44,7 @@ export default class SwapiService {
 
   getAllStarships = async () => {
     const res = await this.getResource(`/starships/`);
-    return res.results.map(this._transformStarship).slice(0, 5);
+    return res.results.map(this._transformStarship);
   };
 
   getStarship = async id => {
@@ -58,32 +58,32 @@ export default class SwapiService {
   };
 
   getPersonImage = async ({ id }) => {
-    let result = await fetch(`${this._imgBase}/characters/${id}.jpg`);
+    /* let result = await fetch(`${this._imgBase}/characters/${id}.jpg`);
     if (result.status === 200) {
       return await `${this._imgBase}/characters/${id}.jpg`;
-    } else {
-      return `https://cdn.browshot.com/static/images/not-found.png`;
-    }
+    } else { */
+    return `https://cdn.browshot.com/static/images/not-found.png`;
+    /* } */
   };
 
   getStarshipImage = async ({ id }) => {
-    let result = await fetch(`${this._imgBase}/starships/${id}.jpg`);
+    /* let result = await fetch(`${this._imgBase}/starships/${id}.jpg`);
 
     if (result.status === 200) {
       return await `${this._imgBase}/starships/${id}.jpg`;
-    } else {
-      return `https://cdn.browshot.com/static/images/not-found.png`;
-    }
+    } else { */
+    return `https://cdn.browshot.com/static/images/not-found.png`;
+    /* } */
   };
 
   getPlanetImage = async ({ id }) => {
-    let result = await fetch(`${this._imgBase}/planets/${id}.jpg`);
+    /* let result = await fetch(`${this._imgBase}/planets/${id}.jpg`);
 
     if (result.status === 200) {
       return await `${this._imgBase}/planets/${id}.jpg`;
-    } else {
-      return `https://cdn.browshot.com/static/images/not-found.png`;
-    }
+    } else { */
+    return `https://cdn.browshot.com/static/images/not-found.png`;
+    /* } */
   };
 
   _extractId = item => {

@@ -1,5 +1,5 @@
 {
-  "homepage": "https://alps-of-idioms.github.io/swdatabase",
+  "homepage": "https://alps-of-idioms.github.io/StarWarsdb",
   "name": "stardb",
   "version": "0.1.0",
   "private": true,
@@ -20,7 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -b master -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

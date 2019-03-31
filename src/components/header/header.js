@@ -18,12 +18,12 @@ const Header = (/* { onServerChange } */) => {
         <li>
           <Link to="/swdatabase/starships/">Starships</Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/swdatabase/login">Login</Link>
         </li>
         <li>
           <Link to="/swdatabase/secret">Secret</Link>
-        </li>
+        </li> */}
       </ul>
       {/* <button className="btn btn-primary btn-sm" onClick={onServerChange}>
         Chaget data source

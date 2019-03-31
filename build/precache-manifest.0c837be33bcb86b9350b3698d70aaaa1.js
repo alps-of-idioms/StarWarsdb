@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/swdatabase/static/js/runtime~main.c58310ef.js"
   },
   {
-    "revision": "07e779e365dbc3aa508a",
-    "url": "/swdatabase/static/js/main.07e779e3.chunk.js"
+    "revision": "5a594b431faa2bbe5906",
+    "url": "/swdatabase/static/js/main.5a594b43.chunk.js"
   },
   {
     "revision": "6a60467a33094c13909c",
     "url": "/swdatabase/static/js/2.6a60467a.chunk.js"
   },
   {
-    "revision": "07e779e365dbc3aa508a",
+    "revision": "5a594b431faa2bbe5906",
     "url": "/swdatabase/static/css/main.83d37a87.chunk.css"
   },
   {
-    "revision": "6d2a1d56ea6d06a68aafbf34342818d4",
+    "revision": "f86fcc5cd212e11bcf5c12910dc974f4",
     "url": "/swdatabase/index.html"
   }
 ];

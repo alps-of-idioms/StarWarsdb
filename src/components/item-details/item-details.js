@@ -50,9 +50,9 @@ export default class ItemDetails extends PureComponent {
         return getImageUrl(item).then(imageUrl => {
           this.setState(state => {
             return {
-              image: imageUrl,
               item,
-              loading: false
+              loading: false,
+              image: imageUrl
             };
           });
         });
