@@ -2,16 +2,16 @@ import React from "react";
 import Header from "../header";
 import RandomPlanet from "../random-planet";
 import ErrorIndicator from "../error-indicator";
-import ErrorButton from "../error-button";
+/* import ErrorButton from "../error-button"; */
 import { SwapiServiceProvider } from "../swapi-service-context";
 import SwapiService from "../../services/swapi-service";
 //import DummySwapiService from "../../services/dummy-swapi-service";
 import {
   PeoplePage,
   StarshipPage,
-  PlanetPage,
-  LoginPage,
-  SecretPage
+  PlanetPage
+  /* LoginPage,
+  SecretPage */
 } from "../pages";
 import ErrorBoundry from "../error-boundry";
 import {
@@ -62,7 +62,7 @@ export default class App extends React.Component {
           <Router>
             <div className="stardb-app">
               <Header onServerChange={this.onServerChange} />
-              <ErrorButton />
+
               <RandomPlanet />
               <Switch>
                 <Route
