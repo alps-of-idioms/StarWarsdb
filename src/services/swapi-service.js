@@ -3,7 +3,9 @@ export default class SwapiService {
   mapStarships = new Map();
   mapPlanets = new Map();
   _apiBase = `https://swapi.co/api`;
-  _imgBase = `https://starwars-visualguide.com/assets/img`;
+  /* _imgBase = `https://starwars-visualguide.com/assets/img`; */
+  _imgBase = `https://minio.ngweb.app/starwars/hotlink-ok`;
+
   getResource = async url => {
     const res = await fetch(`${this._apiBase}${url}`);
     if (!res.ok) {
@@ -58,32 +60,40 @@ export default class SwapiService {
   };
 
   getPersonImage = async ({ id }) => {
-    /* let result = await fetch(`${this._imgBase}/characters/${id}.jpg`);
+    let result = await fetch(`${this._imgBase}/people/${id}.jpg`);
     if (result.status === 200) {
-      return await `${this._imgBase}/characters/${id}.jpg`;
-    } else { */
-    return `https://cdn.browshot.com/static/images/not-found.png`;
-    /* } */
+      return await `${this._imgBase}/people/${id}.jpg`;
+    } else {
+      return `https://cdn.browshot.com/static/images/not-found.png`;
+    }
   };
 
   getStarshipImage = async ({ id }) => {
-    /* let result = await fetch(`${this._imgBase}/starships/${id}.jpg`);
+    let result = await fetch(`${this._imgBase}/starships/${id}.jpg`);
 
     if (result.status === 200) {
       return await `${this._imgBase}/starships/${id}.jpg`;
-    } else { */
+    } else { 
     return `https://cdn.browshot.com/static/images/not-found.png`;
-    /* } */
+     }
   };
 
   getPlanetImage = async ({ id }) => {
-    /* let result = await fetch(`${this._imgBase}/planets/${id}.jpg`);
+    /* let myHeaders = new Headers();
+    this.myHeaders.append("Content-Type", "image/jpg");
+    let myInit = {
+      method: "GET",
+      headers: myHeaders,
+      mode: "cors",
+      cache: "default"
+    }; */
+    let result = await fetch(`${this._imgBase}/planets/${id}.jpg`);
 
     if (result.status === 200) {
-      return await `${this._imgBase}/planets/${id}.jpg`;
-    } else { */
-    return `https://cdn.browshot.com/static/images/not-found.png`;
-    /* } */
+      return `${this._imgBase}/planets/${id}.jpg`;
+    } else {
+      return `https://cdn.browshot.com/static/images/not-found.png`;
+    }
   };
 
   _extractId = item => {

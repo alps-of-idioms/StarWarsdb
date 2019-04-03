@@ -47,7 +47,7 @@ export default class ItemDetails extends PureComponent {
 
     getData(itemId)
       .then(item => {
-        return getImageUrl(item).then(imageUrl => {
+        getImageUrl(item).then(imageUrl => {
           this.setState(state => {
             return {
               item,

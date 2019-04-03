@@ -39,9 +39,9 @@ export default class RandomPlanet extends Component {
   }
 
   updatePlanet = () => {
-    let id = Math.floor(Math.random() * 20);
-    if (id > 19 || id === 1 || id === 0) {
-      id = 19;
+    let id = Math.floor(Math.random() * 11);
+    if (id === 1 || id === 0) {
+      id = 2;
     }
     this.swapiService
       .getPlanet(id)
@@ -75,7 +75,7 @@ const PlanetView = ({ planet }) => {
       <img
         className="planet-image"
         // src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`}
-        src={`https://cdn.browshot.com/static/images/not-found.png`}
+        src={`https://minio.ngweb.app/starwars/hotlink-ok/planets/${id}.jpg`}
         alt="rdplaneimg"
       />
       <div>
