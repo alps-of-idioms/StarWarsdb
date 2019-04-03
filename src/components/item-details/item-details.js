@@ -2,6 +2,7 @@ import React, { PureComponent } from "react";
 import Spinner from "../spinner";
 //import ErrorButton from "../error-button";
 import "./item-details.css";
+import PhotoManager from "../modal";
 //import ErrorIndicator from "../error-indicator";
 
 const Record = ({ item, field, label }, indx) => {
@@ -109,8 +110,7 @@ const ViewDetailss = ({ item, image, children }) => {
   //const { image } = image;
   return (
     <React.Fragment>
-      <img className="item-image" src={image} alt="itemimg" />
-
+      <PhotoManager url={image} />
       <div className="card-body">
         <h4>{name}</h4>
         <ul className="list-group list-group-flush">

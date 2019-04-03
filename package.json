@@ -11,6 +11,7 @@
     "react-app-rewired": "^2.1.0",
     "react-dom": "^16.8.2",
     "react-hot-loader": "^4.7.2",
+    "react-modal": "^3.8.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.5"
   },

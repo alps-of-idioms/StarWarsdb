@@ -60,8 +60,10 @@ export default class SwapiService {
   };
 
   getPersonImage = async ({ id }) => {
-    let result = await fetch(`${this._imgBase}/people/${id}.jpg`);
-    if (result.status === 200) {
+    let result = await fetch(`${this._imgBase}/people/${id}.jpg`, {
+      mode: "no-cors"
+    });
+    if (result.status === 0) {
       return await `${this._imgBase}/people/${id}.jpg`;
     } else {
       return `https://cdn.browshot.com/static/images/not-found.png`;
@@ -69,13 +71,15 @@ export default class SwapiService {
   };
 
   getStarshipImage = async ({ id }) => {
-    let result = await fetch(`${this._imgBase}/starships/${id}.jpg`);
+    let result = await fetch(`${this._imgBase}/starships/${id}.jpg`, {
+      mode: "no-cors"
+    });
 
-    if (result.status === 200) {
+    if (result.status === 0) {
       return await `${this._imgBase}/starships/${id}.jpg`;
-    } else { 
-    return `https://cdn.browshot.com/static/images/not-found.png`;
-     }
+    } else {
+      return `https://cdn.browshot.com/static/images/not-found.png`;
+    }
   };
 
   getPlanetImage = async ({ id }) => {
@@ -87,9 +91,11 @@ export default class SwapiService {
       mode: "cors",
       cache: "default"
     }; */
-    let result = await fetch(`${this._imgBase}/planets/${id}.jpg`);
+    let result = await fetch(`${this._imgBase}/planets/${id}.jpg`, {
+      mode: "no-cors"
+    });
 
-    if (result.status === 200) {
+    if (result.status === 0) {
       return `${this._imgBase}/planets/${id}.jpg`;
     } else {
       return `https://cdn.browshot.com/static/images/not-found.png`;
